@@ -67,6 +67,9 @@ OCSP_REQ_CTX *OCSP_REQ_CTX_new(BIO *wbio, BIO *rbio,
                                unsigned long max_resp_len, int timeout,
                                const char *expected_content_type,
                                int expect_asn1);
+#ifdef __cplusplus
+extern "C"
+#endif
 void OCSP_REQ_CTX_free(OCSP_REQ_CTX *rctx);
 int OCSP_REQ_CTX_http(OCSP_REQ_CTX *rctx,
                       const char *server, const char *port, const char *path);
